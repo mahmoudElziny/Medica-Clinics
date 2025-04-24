@@ -1,6 +1,13 @@
+import HomePage from './components/HomePage';
+import Services from './components/Services';
+import Footer from './components/Footer';
 
 export default function Home() {
-  return (
-    <h1>Home</h1>
-  );
+    return (
+        <>
+            <HomePage />
+            <Services />
+            <Footer />
+        </>
+    );
 }

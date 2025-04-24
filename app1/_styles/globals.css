@@ -25,10 +25,3 @@
         animation: rotate 1s infinite linear;
     }
 } */
-
-.homepage{
-    background-image: url('/bg.png');;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
