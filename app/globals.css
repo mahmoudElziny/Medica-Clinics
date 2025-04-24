@@ -28,7 +28,7 @@
 
 .homepage{
     background-image: url('/bg.png');;
-    background-size: cover;
-    background-position: center;
+    background-size: 100%;
+    background-position: 50% 70%; 
     background-repeat: no-repeat;
 }
