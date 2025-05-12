@@ -4,7 +4,7 @@ import LogoImage from "../../public/logo.jpg";
 
 export default function Navbar() {
   return (
-    <div className="flex justify-around items-center py-6">
+    <nav className="flex justify-between items-center py-6">
       <div className="flex justify-between items-center gap-5">
         <Image
           src={LogoImage}
@@ -40,6 +40,6 @@ export default function Navbar() {
           Book now
         </button>
       </div>
-    </div>
+    </nav>
   );
 }
