@@ -27,8 +27,8 @@
 } */
 
 html {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../public/3436.jpg) no-repeat top center;
-    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../public/benyamin-bohlouli-e7MJLM5VGjY-unsplash.jpg) no-repeat center center;
+    background-size: 100% 100%;
     background-attachment: fixed;
 }
 
