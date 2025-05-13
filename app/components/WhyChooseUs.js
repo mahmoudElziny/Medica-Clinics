@@ -1,6 +1,5 @@
 "use client";
-import Image from "next/image";
-import { StarIcon } from "@heroicons/react/24/solid";
+import { motion } from "framer-motion";
 
 const WhyChooseUs = () => {
   // Benefit cards data
@@ -99,7 +98,13 @@ const WhyChooseUs = () => {
         </h2>
 
         {/* Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
+        <motion.div
+          initial={{ opacity: 0, x: 75 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.85, delay: 0.25 }}
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-14"
+        >
           {benefits.map((benefit, index) => (
             <div
               key={index}
@@ -116,10 +121,16 @@ const WhyChooseUs = () => {
               <p className="text-gray-600">{benefit.description}</p>
             </div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Trust Badges (Optional) */}
-        <div className="mt-12 flex flex-wrap justify-center gap-6">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          viewport={{ once: true }}
+          className="mt-12 flex flex-wrap justify-center gap-6"
+        >
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -155,7 +166,7 @@ const WhyChooseUs = () => {
             </svg>
           </span>
           <span>5-Star Rated</span>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

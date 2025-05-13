@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import LogoImage from "../../public/logo.jpg";
 import { Dancing_Script } from "next/font/google";
+import { motion } from "framer-motion";
 
 const dancing = Dancing_Script({
   weight: ["400", "500", "600", "700"],
@@ -16,8 +18,8 @@ export default function Navbar() {
           src={LogoImage}
           className="rounded-full"
           alt="logo"
-          width={40}
-          height={40}
+          width={45}
+          height={45}
         />
         <Link
           href="/"
@@ -45,9 +47,13 @@ export default function Navbar() {
         >
           Contact
         </Link>
-        <button className="ml-16 bg-primary-light hover:bg-primary rounded-3xl px-5 py-3 text-white text-sm font-semibold">
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="ml-16 bg-primary-light hover:bg-primary rounded-3xl px-5 py-3 text-white text-sm font-semibold shadow-lg"
+        >
           Book now
-        </button>
+        </motion.button>
       </div>
     </nav>
   );
