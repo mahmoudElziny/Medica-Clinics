@@ -1,10 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import LogoImage from "../../public/logo.jpg";
+import { Dancing_Script } from "next/font/google";
+
+const dancing = Dancing_Script({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center py-6">
+    <nav className="flex justify-between items-center py-6 px-20 bg-white">
       <div className="flex justify-between items-center gap-5">
         <Image
           src={LogoImage}
@@ -13,7 +19,10 @@ export default function Navbar() {
           width={40}
           height={40}
         />
-        <Link href="/" className="text-xl font-semibold text-primary">
+        <Link
+          href="/"
+          className={`${dancing.className} text-4xl font-bold text-primary`}
+        >
           Medica Clinics
         </Link>
       </div>
